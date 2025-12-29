@@ -97,4 +97,14 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 - [Stylus Extension](https://github.com/openstyles/stylus)
 - [Google Translate](https://translate.google.com)
 
-- Thanks to @druxore
+
+<div align="center">
+  <h4>Inspiration & Ecosystem</h4>
+  <a href="https://github.com/druxorey">
+    <img src="https://github.com/druxorey.png" width="80px" style="border-radius: 40px"/>
+    <br />
+    <sub><b>@druxorey</b></sub>
+  </a>
+  <br />
+  <small>Special thanks for his extensive collection of Dracula styles across other platforms.</small>
+</div>
