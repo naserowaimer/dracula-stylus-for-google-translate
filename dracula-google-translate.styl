@@ -1,0 +1,216 @@
+/* ==UserStyle==
+@name         Dracula Theme for Google Translate
+@namespace    github.com/naserowaimer/dracula-stylus-for-google-translate
+@version      1.0.0
+@description  A dark theme for Google Translate using the Dracula color scheme
+@author       naserowaimer
+@license      Apache-2.0
+==/UserStyle== */
+
+@-moz-document domain("translate.google.com") {
+  /* Dracula Color Palette */
+  :root {
+    --dracula-background: #282a36;
+    --dracula-current-line: #44475a;
+    --dracula-foreground: #f8f8f2;
+    --dracula-comment: #6272a4;
+    --dracula-cyan: #8be9fd;
+    --dracula-green: #50fa7b;
+    --dracula-orange: #ffb86c;
+    --dracula-pink: #ff79c6;
+    --dracula-purple: #bd93f9;
+    --dracula-red: #ff5555;
+    --dracula-yellow: #f1fa8c;
+  }
+
+  /* Main Background */
+  body,
+  html {
+    background-color: var(--dracula-background) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Header and Navigation */
+  header,
+  .header,
+  .gb_Vc {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Main Container */
+  .main-container,
+  .page-container,
+  c-wiz {
+    background-color: var(--dracula-background) !important;
+  }
+
+  /* Text Areas and Input Fields */
+  textarea,
+  input[type="text"],
+  .input-container,
+  .er8xn,
+  .Q2D2Uc {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+    border-color: var(--dracula-comment) !important;
+  }
+
+  /* Translation Result Box */
+  .result-container,
+  .translation,
+  .tlid-translation,
+  .ryNqvb {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Buttons */
+  button,
+  .button,
+  .VfPpkd-LgbsSe {
+    background-color: var(--dracula-purple) !important;
+    color: var(--dracula-background) !important;
+    border-color: var(--dracula-purple) !important;
+  }
+
+  button:hover,
+  .button:hover,
+  .VfPpkd-LgbsSe:hover {
+    background-color: var(--dracula-pink) !important;
+  }
+
+  /* Links */
+  a,
+  .link {
+    color: var(--dracula-cyan) !important;
+  }
+
+  a:hover,
+  .link:hover {
+    color: var(--dracula-pink) !important;
+  }
+
+  /* Dropdowns and Selects */
+  select,
+  .select,
+  .language-selector,
+  .VfPpkd-O1htCb {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+    border-color: var(--dracula-comment) !important;
+  }
+
+  /* Cards and Panels */
+  .card,
+  .panel,
+  .VfPpkd-rymPhb {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Dividers */
+  hr,
+  .divider {
+    border-color: var(--dracula-comment) !important;
+  }
+
+  /* Icons */
+  .icon,
+  .material-icons,
+  svg {
+    fill: var(--dracula-foreground) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Tooltips */
+  .tooltip,
+  .VfPpkd-MPu53c {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+    border-color: var(--dracula-comment) !important;
+  }
+
+  /* Menu Items */
+  .menu-item,
+  .VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me {
+    background-color: var(--dracula-background) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  .menu-item:hover,
+  .VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me:hover {
+    background-color: var(--dracula-current-line) !important;
+  }
+
+  /* Search and Suggestions */
+  .suggestions,
+  .autocomplete {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Highlighted Text */
+  .highlight,
+  mark {
+    background-color: var(--dracula-yellow) !important;
+    color: var(--dracula-background) !important;
+  }
+
+  /* Scrollbars */
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--dracula-background);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--dracula-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--dracula-comment);
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dracula-purple);
+  }
+
+  /* Additional Elements */
+  .footer {
+    background-color: var(--dracula-current-line) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Placeholder Text */
+  ::placeholder {
+    color: var(--dracula-comment) !important;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--dracula-purple) !important;
+    color: var(--dracula-foreground) !important;
+  }
+
+  /* Loading Indicators */
+  .spinner,
+  .loading {
+    border-color: var(--dracula-purple) !important;
+  }
+
+  /* Error Messages */
+  .error {
+    color: var(--dracula-red) !important;
+  }
+
+  /* Success Messages */
+  .success {
+    color: var(--dracula-green) !important;
+  }
+
+  /* Warning Messages */
+  .warning {
+    color: var(--dracula-orange) !important;
+  }
+}
