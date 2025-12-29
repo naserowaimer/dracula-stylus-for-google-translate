@@ -1,6 +1,7 @@
 # Dracula Theme for Google Translate
 
-![Dracula](https://draculatheme.com/static/img/dracula.gif)
+<img width="2048" height="590" alt="dracula" src="https://github.com/user-attachments/assets/91971db7-a603-4e75-bb37-1cccfa4e9c14" />
+
 
 > A dark theme for [Google Translate](https://translate.google.com) using the [Dracula](https://draculatheme.com) color scheme.
 
@@ -12,27 +13,21 @@ This is a Stylus CSS theme that transforms Google Translate's interface with the
 
 The theme uses the official Dracula color scheme:
 
-- **Background**: `#282a36`
-- **Current Line**: `#44475a`
-- **Foreground**: `#f8f8f2`
-- **Comment**: `#6272a4`
-- **Cyan**: `#8be9fd`
-- **Green**: `#50fa7b`
-- **Orange**: `#ffb86c`
-- **Pink**: `#ff79c6`
-- **Purple**: `#bd93f9`
-- **Red**: `#ff5555`
-- **Yellow**: `#f1fa8c`
-
+- ![](https://img.shields.io/badge/Bg_Darkest-282a36?style=flat-square&logoColor=white) `Main Background`
+- ![](https://img.shields.io/badge/Bg_Current-44475a?style=flat-square&logoColor=white) `Cards, Menus`
+- ![](https://img.shields.io/badge/Text_White-f8f8f2?style=flat-square&labelColor=282a36) `Main Text`
+- ![](https://img.shields.io/badge/Text_Grey-ababa7?style=flat-square&labelColor=282a36) `Muted Text`
+- ![](https://img.shields.io/badge/Comment-6272a4?style=flat-square) `Borders & Dividers`
+- ![](https://img.shields.io/badge/Cyan-8be9fd?style=flat-square&labelColor=282a36) `Accents`
+- ![](https://img.shields.io/badge/Purple-bd93f9?style=flat-square) `Links`
 ## Installation
 
 ### Prerequisites
 
 You need a browser extension that supports UserStyles:
 
-- [Stylus for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+- [Stylus for Chrome and other chromium-based browsers](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 - [Stylus for Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
-- [Stylus for Opera](https://addons.opera.com/en/extensions/details/stylus/)
 
 ### Install the Theme
 
@@ -57,7 +52,8 @@ You can also install directly from the `.styl` file:
 
 ### Before and After
 
-![Screenshot Placeholder](https://via.placeholder.com/800x450/282a36/f8f8f2?text=Screenshot+Coming+Soon)
+<img width="1473" height="930" alt="screenshot" src="https://github.com/user-attachments/assets/3956f439-7fd6-4343-aa91-22383792b719" />
+
 
 *Screenshot showing Google Translate with the Dracula theme will be added here*
 
@@ -95,12 +91,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 - [Dracula Theme](https://draculatheme.com) - The color scheme
 - Created for use with the [Stylus](https://github.com/openstyles/stylus) browser extension
 
-## Team
-
-This theme is maintained by [naserowaimer](https://github.com/naserowaimer).
-
 ## Related
 
 - [Dracula Theme Official Site](https://draculatheme.com)
 - [Stylus Extension](https://github.com/openstyles/stylus)
 - [Google Translate](https://translate.google.com)
+
+- Thanks to @druxore
