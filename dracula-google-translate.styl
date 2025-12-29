@@ -10,214 +10,173 @@
 ==/UserStyle== */
 
 @-moz-document domain("translate.google.com") {
-  /* Dracula Color Palette */
-  :root {
-    --dracula-background: #282a36;
-    --dracula-current-line: #44475a;
-    --dracula-foreground: #f8f8f2;
-    --dracula-comment: #6272a4;
-    --dracula-cyan: #8be9fd;
-    --dracula-green: #50fa7b;
-    --dracula-orange: #ffb86c;
-    --dracula-pink: #ff79c6;
-    --dracula-purple: #bd93f9;
-    --dracula-red: #ff5555;
-    --dracula-yellow: #f1fa8c;
-  }
 
-  /* Main Background */
-  body,
-  html {
-    background-color: var(--dracula-background) !important;
-    color: var(--dracula-foreground) !important;
-  }
+    /* --- 1. DRACULA VARIABLES --- */
+    :root {
+        --dracula-bg: #282a36;        /* Darkest (Main Background) */
+        --dracula-current: #44475a;   /* Lighter (Cards, Menus, Inputs) */
+        --dracula-fg: #f8f8f2;        /* White Text */
+        --dracula-grey: #ababa7;      /* Muted Text */
+        --dracula-comment: #6272a4;   /* Borders & Dividers */
+        --dracula-cyan: #8be9fd;      /* Accents */
+        --dracula-purple: #bd93f9;    /* Links/Icons */
+    }
+    
 
-  /* Header and Navigation */
-  header,
-  .header,
-  .gb_Vc {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-  }
+    /* --- 2. THE "NUCLEAR" RESET (Global Fallbacks) --- */
+    
+    /* Force main page and wrappers to be dark */
+    body, 
+    html,
+    c-wiz, 
+    div[role="main"], 
+    header, 
+    nav, 
+    footer {
+        background-color: var(--dracula-bg) !important;
+        color: var(--dracula-fg) !important;
+    }
 
-  /* Main Container */
-  .main-container,
-  .page-container,
-  c-wiz {
-    background-color: var(--dracula-background) !important;
-  }
+    /* Force all text to white by default (unless overridden) */
+    *, a, span, div, p {
+        color: var(--dracula-fg);
+        scrollbar-color: var(--dracula-comment) var(--dracula-bg);
+    }
+    
+    /* Force all borders to Dracula Comment Color */
+    * {
+        border-color: var(--dracula-comment) !important;
+    }
 
-  /* Text Areas and Input Fields */
-  textarea,
-  input[type="text"],
-  .input-container,
-  .er8xn,
-  .Q2D2Uc {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-    border-color: var(--dracula-comment) !important;
-  }
+    /* --- 3. INPUTS & TEXT AREAS (Universal) --- */
+    /* Works on any textarea or editable div, present or future */
+    textarea, 
+    input[type="text"], 
+    [contenteditable="true"] , .W5CUef{
+        background-color: transparent !important;
+        color: var(--dracula-fg) !important;
+        caret-color: var(--dracula-fg) !important;
+        -webkit-text-fill-color: var(--dracula-fg) !important;
+    }
+    
+    /* Input placeholders */
+    ::placeholder, .jCAhz:hover,  {
+        color: var(--dracula-comment) !important;
+    }
+    @media (hover: hover) {
+        .jCAhz:hover, .LdhArd {
+            background-color: var(--dracula-comment) !important;
+        }
+    }
+    /* --- 4. CARDS & CONTAINERS (Heuristic Matching) --- */
+    
+    /* 
+       Logic: If we miss a specific class, these rules try to catch 
+       "card-like" items (things with shadows or borders) 
+    */
+    
+    /* Standard Translation Cards (Specific Classes + Generic Fallback) */
+    .AxqVh div.OPPzxe > div > c-wiz, /* Source Card */
+    .sciAJc,                         /* Target Card */
+    .QcsUad,                         /* Inner Results */
+    [role="region"],                 /* Generic Regions */
+    div[style*="background-color: rgb(255, 255, 255)"], /* Inline-styled white boxes */
+    div[style*="background-color: white"],
+    .hX7wnb, .ydsGXd, .s0ijVb        /* Dictionary/Definition Boxes */
+    {
+        background-color: var(--dracula-current) !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+        border-radius: 8px;
+    }
+    
+    /* Ensure containers *behind* cards are dark */
+    .ccvoYb, .AxqVh, .OPPzxe , .U8K5nb{
+        background-color: var(--dracula-bg) !important;
+    }
 
-  /* Translation Result Box */
-  .result-container,
-  .translation,
-  .tlid-translation,
-  .ryNqvb {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-  }
+    /* --- 5. MENUS, POPUPS & DROPDOWNS --- */
+    /* Captures "More Languages" list, History drawer, etc. */
+    [role="dialog"],
+    [role="menu"],
+    [role="listbox"],
+    .goog-menu,
+    .goog-menuitem,
+    div[class*="Menu"],
+    div[class*="Popup"] , .WtlSJf.KKjvXb, .WtlSJf:hover, .EILo8d,.HNmKjc,.pw1uU,.K1puac>*,
+    [class*="gradient"], div::after, .X4DQ0::after, .U0xwnf::after, .GAyS9e, .vLsFwd, .lyY31c
+    {
+        background-color: var(--dracula-current) !important;
+        color: var(--dracula-fg) !important;
+    }
+    
+    /* Hover effects on menu items */
+    [role="option"]:hover,
+    [role="menuitem"]:hover,
+    button:hover,
+    li:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
 
-  /* Buttons */
-  button,
-  .button,
-  .VfPpkd-LgbsSe {
-    background-color: var(--dracula-purple) !important;
-    color: var(--dracula-background) !important;
-    border-color: var(--dracula-purple) !important;
-  }
+    /* --- 6. CLEANUP (Removing Ugly Elements) --- */
+    
+    /* Remove white gradients/fade effects */
+    [class*="gradient"],
+    div::after,
+    .X4DQ0::after, 
+    .U0xwnf::after, 
+    .GAyS9e,
+    .vLsFwd, 
+    .lyY31c {
+        background-image: none !important;
+        background: none !important;
+    }
+    
+    /* Remove generic shadow borders on the main wrapper */
+    .QsA0jb {
+        box-shadow: none !important;
+        border: none !important;
+    }
 
-  button:hover,
-  .button:hover,
-  .VfPpkd-LgbsSe:hover {
-    background-color: var(--dracula-pink) !important;
-  }
+    /* --- 7. NAVIGATION & ICONS --- */
+    
+    /* Header & Nav Bars */
+    header#gb, .gb_Ha, .hgbeOc, nav.U0xwnf {
+        background-color: var(--dracula-bg) !important;
+        border-bottom: 1px solid var(--dracula-comment) !important;
+    }
+    
+    /* Active Language Tab */
+    .cWQYBc[aria-selected="true"],
+    [aria-selected="true"] {
+        border-bottom: 2px solid var(--dracula-cyan) !important;
+        color: var(--dracula-cyan) !important;
+    }
 
-  /* Links */
-  a,
-  .link {
-    color: var(--dracula-cyan) !important;
-  }
+    /* Icons (Universal SVG Inversion) */
+    svg, 
+    .material-icons, 
+    .material-icons-extended, 
+    button i, 
+    span i .material-icons-extended.VfPpkd-Bz112c-kBDsod {
+        fill: var(--dracula-fg) !important;
+        color: var(--dracula-fg) !important;
+    }
+    
+    /* Muted text (Character counts, secondary info) */
+    .dWI6ed, .Ose4Jf .VfPpkd-jY41G-V67aGc, .jq25U {
+        color: var(--dracula-grey) !important;
+    }
+    
+    /* Nav Bubbles (Bottom/Side links) */
+    .ySES5 , .NWlwsb, .fMHXgc, .qSb8Pe.KKjvXb{
+        background-color: var(--dracula-current) !important;
+        border: 1px solid var(--dracula-comment) !important;
+        color: var(--dracula-purple) !important;
+    }
 
-  a:hover,
-  .link:hover {
-    color: var(--dracula-pink) !important;
-  }
-
-  /* Dropdowns and Selects */
-  select,
-  .select,
-  .language-selector,
-  .VfPpkd-O1htCb {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-    border-color: var(--dracula-comment) !important;
-  }
-
-  /* Cards and Panels */
-  .card,
-  .panel,
-  .VfPpkd-rymPhb {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-  }
-
-  /* Dividers */
-  hr,
-  .divider {
-    border-color: var(--dracula-comment) !important;
-  }
-
-  /* Icons */
-  .icon,
-  .material-icons,
-  svg {
-    fill: var(--dracula-foreground) !important;
-    color: var(--dracula-foreground) !important;
-  }
-
-  /* Tooltips */
-  .tooltip,
-  .VfPpkd-MPu53c {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-    border-color: var(--dracula-comment) !important;
-  }
-
-  /* Menu Items */
-  .menu-item,
-  .VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me {
-    background-color: var(--dracula-background) !important;
-    color: var(--dracula-foreground) !important;
-  }
-
-  .menu-item:hover,
-  .VfPpkd-rymPhb-ibnC6b-OWXEXe-OWB6Me:hover {
-    background-color: var(--dracula-current-line) !important;
-  }
-
-  /* Search and Suggestions */
-  .suggestions,
-  .autocomplete {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-  }
-
-  /* Highlighted Text */
-  .highlight,
-  mark {
-    background-color: var(--dracula-yellow) !important;
-    color: var(--dracula-background) !important;
-  }
-
-  /* Scrollbars - WebKit (Chrome, Safari, Edge) */
-  ::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: var(--dracula-background);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: var(--dracula-comment);
-    border-radius: 6px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--dracula-purple);
-  }
-
-  /* Scrollbars - Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--dracula-comment) var(--dracula-background);
-  }
-
-  /* Additional Elements */
-  .footer {
-    background-color: var(--dracula-current-line) !important;
-    color: var(--dracula-foreground) !important;
-  }
-
-  /* Placeholder Text */
-  ::placeholder {
-    color: var(--dracula-comment) !important;
-  }
-
-  /* Selection */
-  ::selection {
-    background-color: var(--dracula-purple) !important;
-    color: var(--dracula-foreground) !important;
-  }
-
-  /* Loading Indicators */
-  .spinner,
-  .loading {
-    border-color: var(--dracula-purple) !important;
-  }
-
-  /* Error Messages */
-  .error {
-    color: var(--dracula-red) !important;
-  }
-
-  /* Success Messages */
-  .success {
-    color: var(--dracula-green) !important;
-  }
-
-  /* Warning Messages */
-  .warning {
-    color: var(--dracula-orange) !important;
-  }
+    /* --- 8. SCROLLBARS --- */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: var(--dracula-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--dracula-comment); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--dracula-purple); }
 }
